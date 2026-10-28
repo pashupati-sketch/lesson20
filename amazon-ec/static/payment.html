@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>決済画面 - Amazon EC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>決済画面</h1>
+    </header>
+    <main>
+        <div class="payment-container">
+            <h2>お支払い</h2>
+            <p>支払金額：<span id="payment-amount">0</span>円</p>
+            
+            <form id="payment-form">
+                <h3>支払方法を選択</h3>
+                <div>
+                    <label>
+                        <input type="radio" name="method" value="credit" checked> クレジットカード
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="method" value="bank"> 銀行振込
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="method" value="cod"> 代金引換
+                    </label>
+                </div>
+                <br>
+                <button type="submit">決済する</button>
+            </form>
+            <div id="payment-result"></div>
+        </div>
+    </main>
+    <script src="payment.js"></script>
+</body>
+</html>
